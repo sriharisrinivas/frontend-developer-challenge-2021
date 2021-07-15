@@ -1,11 +1,12 @@
-.bg-container{
+.bg-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.header, footer{
+.header,
+footer {
     background-color: rgb(57, 138, 204);
     color: white;
     font-size: 18px;
@@ -15,7 +16,7 @@
     height: 45px;
 }
 
-.content-container{
+.content-container {
     display: flex;
     flex-direction: column;
     min-width: 50%;
@@ -24,15 +25,21 @@
     margin: 60px auto 60px auto;
 }
 
-.person-card-container{
+.person-card-container {
     display: flex;
-    min-height: 260px;
+    min-height: 150px;
     border: 3px solid rgb(57, 138, 204);
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.image-container{
+@media screen and (min-width: 768px) {
+    .person-card-container{
+        min-height: 260px;
+    }
+}
+
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,23 +48,36 @@
 }
 
 .image {
-    width: 180px;
-    height: 180px;
-    border-radius: 40px;
+    min-width: 90%;
+    border-radius: 30%;
 }
 
-.vertical-line{
+
+@media screen and (max-width: 575px){
+    .image{
+        min-width: 130%;
+    }
+    
+}
+
+.vertical-line {
     border-left: 2px solid rgba(128, 128, 128, 0.514);
     height: 180px;
     margin: 32px 20px 0px 20px;
 }
 
-.person-details-container{
+.person-details-container {
     width: 60%;
     padding: 20px;
     padding-top: 40px;
 }
 
-.details-style{
-    font-size: 17px;
+.details-style {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    .details-style {
+        font-size: 17px;
+    }
 }
